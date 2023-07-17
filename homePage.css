@@ -1,0 +1,218 @@
+@font-face {
+    font-family: 'poppins';
+    src: url(FontsFree-Net-Poppins-Bold.ttf) format('truetype');
+    font-weight: normal;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins';
+    background-color: rgb(217, 217, 217);
+}
+/*----------------------------------Nave Bar--------------------------*/
+html{
+    scroll-behavior: smooth;
+}
+.OG_Nav{
+    position: relative;
+    height: 100%;
+    width: 100vh;
+    background-color: blue;
+    overflow: hidden; 
+    display: inline;
+}
+.name{
+    width: 240px;
+    height: auto;
+    position: relative;
+}
+nav{
+    display: flex;
+    width: 84%;
+    margin: auto;
+    padding: 20px 0;
+    margin-top: 0;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: green; */
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(204, 102, 255);
+    padding: 10px;
+}
+nav ul li a:hover{
+    background-color: rgb(230, 230, 230);
+    border-radius: 10px;
+    
+}
+.burger{
+    display: none;
+    cursor: pointer;
+}
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: rgb(204, 102, 255);
+    margin: 5px;
+
+}
+/* ----------------------------body------------------------------ */
+.mid-body{
+    width: 73%;
+    display: inline;
+    position: relative;
+}
+.resume{
+    top: 200px;
+    width: 95%;
+    display: inline;
+    position: relative;
+}
+.image{
+    position: relative;
+    display: flex;
+    float: right;
+    top: 5px;
+    right: 200px;
+}
+.image img{
+    height: 500px;
+    width: auto;
+}
+.discription{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: auto;
+    padding: 20px o;
+    /* background-color: red; */
+    justify-content: space-between;
+    top: 150px;
+    right: 20px;
+    font-size: 25px;
+}
+.resumeDownload{
+    width: 140px;
+    height: auto;
+}
+.download{
+    text-decoration: none;
+}
+.resumeDownload:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+.resume{
+    display: inline;
+}
+.resume h1{
+    margin-top: 100px;
+    padding-bottom: 20px;
+}
+.resume h3{
+    padding-bottom: 20px;
+    margin-left: 25px;
+}
+.resume h4{
+    padding-bottom: 20px;
+    margin-left: 50px;
+}
+.resume p{
+    font-weight: none;
+    margin-left: 70px;
+    font-size: 20px;
+    display: flex;
+    position: relative;
+}
+.resume img{
+    width: 530px;
+    height: auto;
+    display: flex;
+    position: relative;
+    float: left;
+    left: 510px;
+    bottom: 150px;
+}
+/* ----------------------------Screen change------------------------------ */
+@media screen and (max-width:1000px) {
+    nav{
+        width: 100%;
+    }
+    nav ul li a{
+        font-size: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .image img{
+        display: none;
+    }
+    .discription{
+        display: none;
+    }
+    body{
+        overflow-x: hidden;
+    }
+    
+    .name{
+        margin-left: 30px;
+        align-content: center;
+    }
+    nav ul{
+        position: absolute;
+        right: 0px;
+        height: 80vh;
+        top: 20vh;
+        background-color: rgb(204, 102, 255);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    nav ul li{
+        opacity: 0;
+        margin-top: 10%;
+        /* padding-bottom: 10px; */
+    }
+    nav ul li a{
+        color: white;
+        background-color: rgb(204, 102, 255);
+        padding-bottom: 15px;
+        font-size: 25px;
+    }
+    nav ul li a:hover{
+        background-color: rgb(217, 217, 217);
+        color: rgb(204, 102, 255);
+
+    }
+    .burger{
+        margin-right: 65px;
+        display: block;
+    } 
+    
+}
+.nav-active{
+    transform: translateX(0%);
+}
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translate(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0px);
+    }
+}

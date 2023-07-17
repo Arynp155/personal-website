@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Neometric';
+    src: local('Neometric Alt Bold'), local('Neometric-Alt-Bold'),
+        url('NeometricAlt-Bold.woff2') format('woff2'),
+        url('NeometricAlt-Bold.woff') format('woff'),
+        url('NeometricAlt-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }
